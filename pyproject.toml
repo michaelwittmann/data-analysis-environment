@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "mw_data_analysis_docker_img"
+name = "data_analysis_python_image"
 version = "0.1.0"
 description = "A data analysis docker image"
 authors = ["Michael Wittmann <michael.wittmann@tum.de>"]
@@ -15,6 +15,7 @@ holidays = "^0.10.4"
 joblib = "^1.0.0"
 jupyter = "^1.0.0"
 mplleaflet = "^0.0.5"
+jedi = "^0.17.1"
 jupyter-contrib-nbextensions = "^0.5.1"
 Shapely = "^1.7.1"
 geopandas = "^0.8.1"
@@ -25,6 +26,7 @@ statsmodels = "^0.12.1"
 tensorflow = "^2.4.0"
 pandas = "^1.2.0"
 contextily = "^1.0.1"
+jupyter_nbextensions_configurator = "^0.4.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
