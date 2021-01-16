@@ -12,6 +12,7 @@ ENV LANG de_DE.utf8
 # Fix DL4006
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
+# Install apt essentials
 RUN apt-get update && apt-get install -y --no-install-recommends\
     apt-utils \
     software-properties-common \
@@ -20,7 +21,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends\
     lsb-release \
     ca-certificates
 
-# Install all OS dependencies for fully functional notebook server
+# Install usefull stuff
 RUN apt-get update && apt-get install -yq --no-install-recommends \
     build-essential \
     vim-tiny \
@@ -49,33 +50,7 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
 # Create alternative for nano -> nano-tiny
 RUN update-alternatives --install /usr/bin/nano nano /bin/nano-tiny 10
 
-# Python 3.8.7 install
-# ensure local python is preferred over distribution python
-ENV PATH /usr/local/bin:$PATH
-
-
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    python3.8 \
-    python3-pip \
-    build-essential \
-    libssl-dev \
-    libffi-dev \
-    python3-dev \
-    && apt-get clean && rm -rf /var/lib/apt/lists/* \
-	&& python3 --version
-
-
-# make some useful symlinks that are expected to exist
-RUN cd /usr/local/bin \
-	&& ln -s idle3 idle \
-	&& ln -s pydoc3 pydoc \
-	&& ln -s python3 python \
-	&& ln -s python3-config python-config
-
-RUN pip3 install --upgrade pip
-RUN pip3 install poetry
-
-# GIS dependencies
+# Install GIS dependencies
 #RUN add-apt-repository ppa:ubuntugis/ubuntugis-stable
 RUN add-apt-repository ppa:ubuntugis/ubuntugis-unstable
 #RUN add-apt-repository ppa:grass/grass-stable
@@ -91,18 +66,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     pdal \
     libpdal-plugin-python \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
-
-# Install poetry
-
-
-WORKDIR /tmp
-
-COPY ./pyproject.toml ./
-
-RUN poetry config virtualenvs.create false \
-  && poetry install --no-interaction --no-ansi
-
-RUN jupyter nbextensions_configurator enable --user
 
 WORKDIR /home/ubuntu
 
