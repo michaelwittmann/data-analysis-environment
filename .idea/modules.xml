@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/data_analysis_python_container.iml" filepath="$PROJECT_DIR$/.idea/data_analysis_python_container.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../data_analysis_environment/.idea/data_analysis_environment.iml" filepath="$PROJECT_DIR$/../data_analysis_environment/.idea/data_analysis_environment.iml" />
     </modules>
   </component>
 </project>
