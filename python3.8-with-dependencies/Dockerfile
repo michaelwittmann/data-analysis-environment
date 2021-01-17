@@ -1,4 +1,4 @@
-FROM micwittmann/data_analysis_environment:python3.8
+FROM micwittmann/data-analysis-environment:python3.8
 
 LABEL maintainer="Michael Wittmann <michael.wittmann@tum.de>"
 
