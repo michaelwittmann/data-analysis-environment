@@ -1,4 +1,4 @@
-FROM micwittmann/data_analysis_environment:base
+FROM micwittmann/data-analysis-environment:base
 
 LABEL maintainer="Michael Wittmann <michael.wittmann@tum.de>"
 
