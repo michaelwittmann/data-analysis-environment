@@ -30,6 +30,7 @@ jupyter_nbextensions_configurator = "^0.4.1"
 tables = "^3.6.1"
 tqdm = "^4.56.0"
 
+
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
 flake8 = "^3.8.3"

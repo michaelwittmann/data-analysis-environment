@@ -10,6 +10,7 @@ COPY pyproject.toml ./
 RUN poetry config virtualenvs.create false \
   && poetry install --no-interaction --no-ansi
 
+RUN jupyter contrib nbextension install --user
 RUN jupyter nbextensions_configurator enable --user
 
 WORKDIR /home/ubuntu
