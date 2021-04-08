@@ -29,6 +29,7 @@ contextily = "^1.0.1"
 jupyter_nbextensions_configurator = "^0.4.1"
 tables = "^3.6.1"
 tqdm = "^4.56.0"
+descartes = "^1.1.0"
 
 
 [tool.poetry.dev-dependencies]
