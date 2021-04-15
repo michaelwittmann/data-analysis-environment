@@ -30,6 +30,7 @@ jupyter_nbextensions_configurator = "^0.4.1"
 tables = "^3.6.1"
 tqdm = "^4.56.0"
 descartes = "^1.1.0"
+folium = "^0.12.1"
 
 
 [tool.poetry.dev-dependencies]
