@@ -21,7 +21,7 @@ jobs:
       - name: build the image
         run: |
           docker buildx build --push --tag micwittmann/data-analysis-environment:base --platform linux/amd64,linux/arm64 base/.
-  build-python3.8:
+  build-python38:
     needs: build-base
     runs-on: ubuntu-latest
     steps:
@@ -37,8 +37,8 @@ jobs:
       - name: build the image
         run: |
           docker buildx build --push --tag micwittmann/data-analysis-environment:python3-8 --platform linux/amd64,linux/arm64 python3.8/.
-  build-python3.8-with-dependencies:
-    needs: build-python3.8
+  build-python38-with-dependencies:
+    needs: build-python38
     runs-on: ubuntu-latest
     steps:
       - name: checkout code
