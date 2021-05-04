@@ -2,17 +2,19 @@ FROM micwittmann/data-analysis-environment:base
 
 LABEL maintainer="Michael Wittmann <michael.wittmann@tum.de>"
 
+RUN apt-get update && apt-get install -y apt-transport-https
+
 # Python 3.8.7 install
 # ensure local python is preferred over distribution python
 ENV PATH /usr/local/bin:$PATH
-
+RUN ls /usr/sbin/dpkg-split
 RUN apt-get update && apt-get install -y --no-install-recommends \
     python3.8 \
     python3-pip \
     build-essential \
-    libssl-dev \
-    libffi-dev \
-    python3-dev \
+#    libssl-dev \
+#    libffi-dev \
+#    python3-dev \
     && apt-get clean && rm -rf /var/lib/apt/lists/* \
 	&& python3 --version
 
