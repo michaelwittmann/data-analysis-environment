@@ -20,6 +20,4 @@ jobs:
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
       - name: build the image
         run: |
-          docker buildx build \
-            --tag micwittmann/data-analysis-environment:base \
-            --platform linux/amd64, linux/arm64 base/.
+          docker buildx build --tag micwittmann/data-analysis-environment:base --platform linux/amd64,linux/arm64 base/.
