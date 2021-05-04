@@ -2,8 +2,9 @@ FROM ubuntu:20.04
 
 LABEL maintainer="Michael Wittmann <michael.wittmann@tum.de>"
 
-ENV TZ=Europe/Berlin
-
+# Fix DL4006
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+RUN apt-get update && apt-get install -y apt-transport-https
 # install and set the "de_DE.UTF-8"
 RUN apt-get update && apt-get install -y locales
 #&& rm -rf /var/lib/apt/lists/* \
@@ -11,8 +12,8 @@ RUN apt-get update && apt-get install -y locales
 #ENV LANG de_DE.utf8
 RUN locale-gen de_DE.UTF-8
 RUN update-locale LANG=de_DE.UTF-8
-# Fix DL4006
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+ENV TZ=Europe/Berlin
+
 
 # Install apt essentials
 RUN apt-get update && apt-get install -y --no-install-recommends\
