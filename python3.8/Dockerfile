@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python3.8 \
     python3-pip \
     build-essential \
-#    libssl-dev \
+    libssl-dev \
 #    libffi-dev \
     python3-dev \
     && apt-get clean && rm -rf /var/lib/apt/lists/* \
