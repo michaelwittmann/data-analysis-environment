@@ -524,7 +524,7 @@ figure.autolayout : True     ## When True, automatically adjust subplot
 #path.effects : []  ##
 
 #### SAVING FIGURES
-## the default savefig params can be different from the display params
+## the default fig params can be different from the display params
 ## e.g., you may want a higher resolution, or to make the figure
 ## background white
 savefig.dpi         : 300   ## figure dots per inch or 'figure'
@@ -538,7 +538,7 @@ savefig.bbox        : tight ## 'tight' or 'standard'.
                                 ## use ffmpeg_file instead
 savefig.pad_inches  : 0.2      ## Padding to be used when bbox is set to 'tight'
 #savefig.jpeg_quality: 95       ## when a jpeg is saved, the default quality parameter.
-savefig.directory   : plots/   ## default directory in savefig dialog box,
+#savefig.directory   : plots/   ## default directory in savefig dialog box,
                                 ## leave empty to always use current working directory
 #savefig.transparent : False    ## setting that controls whether figures are saved with a
                                 ## transparent background by default
