@@ -329,7 +329,7 @@ axes.formatter.use_locale : True ## When True, format tick labels
 #axes.unicode_minus  : True    ## use unicode for the minus symbol
                                ## rather than hyphen.  See
                                ## http://en.wikipedia.org/wiki/Plus_and_minus_signs#Character_codes
-axes.prop_cycle    :  cycler('color', ['005293', '98C6EA', '64A0C8', '808080','E37222', 'A2AD00', 'DAD7CB', '69085A', '0f1b5f', '00778a', '007c30', '679a1d', 'ffdc00','f9ba00','d64c13', 'c4071b', '9c0d16'])
+axes.prop_cycle    :  cycler('color', ['005293','E37222', 'A2AD00', '98C6EA']) + cycler('linestyle', ['-', '--', ':', '-.'])
     #cycler('color', ['k']) * cycler('linestyle', ['-', '--', ':', '-.'])
 
                       ## color cycle for plot lines  as list of string
