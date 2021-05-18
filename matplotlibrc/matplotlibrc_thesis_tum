@@ -414,7 +414,7 @@ legend.loc           : best
 legend.frameon       : True     ## if True, draw the legend on a background patch
 legend.framealpha    : 1     ## legend patch transparency
 legend.facecolor     : inherit  ## inherit from axes.facecolor; or color spec
-legend.edgecolor     : 1      ## background patch boundary color
+legend.edgecolor     : black      ## background patch boundary color
 legend.fancybox      : False     ## if True, use a rounded box for the
                                  ## legend background, else a rectangle
 legend.shadow        : False    ## if True, give background a shadow effect
