@@ -453,9 +453,9 @@ figure.frameon : False         ## enable figure frame
                                  ## expressed as a fraction of the average axis width
 #figure.subplot.hspace  : 0.2    ## the amount of height reserved for space between subplots,
                                  ## expressed as a fraction of the average axis height
-figure.subplot.wspace  : 0.0    ## the amount of width reserved for space between subplots,
+figure.subplot.wspace  : 0.1    ## the amount of width reserved for space between subplots,
                                  ## expressed as a fraction of the average axis width
-figure.subplot.hspace  : 0.0    ## the amount of height reserved for space between subplots,
+figure.subplot.hspace  : 0.1    ## the amount of height reserved for space between subplots,
                                  ## expressed as a fraction of the average axis height
 ## Figure layout
 figure.autolayout : True     ## When True, automatically adjust subplot
