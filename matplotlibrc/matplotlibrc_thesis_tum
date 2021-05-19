@@ -447,15 +447,11 @@ figure.frameon : False         ## enable figure frame
 ## The figure subplot parameters.  All dimensions are a fraction of the
 #figure.subplot.left    : 0.125  ## the left side of the subplots of the figure
 #figure.subplot.right   : 0.9    ## the right side of the subplots of the figure
-figure.subplot.bottom  : 0.01   ## the bottom of the subplots of the figure
+#figure.subplot.bottom  : 0.01   ## the bottom of the subplots of the figure
 #figure.subplot.top     : 0.5   ## the top of the subplots of the figure
 #figure.subplot.wspace  : 0.2    ## the amount of width reserved for space between subplots,
                                  ## expressed as a fraction of the average axis width
 #figure.subplot.hspace  : 0.2    ## the amount of height reserved for space between subplots,
-                                 ## expressed as a fraction of the average axis height
-figure.subplot.wspace  : 0.1    ## the amount of width reserved for space between subplots,
-                                 ## expressed as a fraction of the average axis width
-figure.subplot.hspace  : 0.01    ## the amount of height reserved for space between subplots,
                                  ## expressed as a fraction of the average axis height
 ## Figure layout
 figure.autolayout : True     ## When True, automatically adjust subplot
@@ -534,12 +530,12 @@ savefig.dpi         : 300   ## figure dots per inch or 'figure'
 savefig.facecolor   : white    ## figure facecolor when saving
 savefig.edgecolor   : white    ## figure edgecolor when saving
 savefig.format      : pdf      ## png, ps, pdf, svg
-savefig.bbox        : standard ## 'tight' or 'standard'.
+savefig.bbox        : tight ## 'tight' or 'standard'.
                                 ## 'tight' is incompatible with pipe-based animation
                                 ## backends but will workd with temporary file based ones:
                                 ## e.g. setting animation.writer to ffmpeg will not work,
                                 ## use ffmpeg_file instead
-#savefig.pad_inches  : 0      	## Padding to be used when bbox is set to 'tight'
+#savefig.pad_inches  : 0.4      	## Padding to be used when bbox is set to 'tight'
 #savefig.jpeg_quality: 95       ## when a jpeg is saved, the default quality parameter.
 #savefig.directory   : plots/   ## default directory in savefig dialog box,
                                 ## leave empty to always use current working directory
