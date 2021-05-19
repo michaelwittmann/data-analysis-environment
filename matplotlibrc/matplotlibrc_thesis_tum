@@ -535,7 +535,7 @@ savefig.bbox        : tight ## 'tight' or 'standard'.
                                 ## backends but will workd with temporary file based ones:
                                 ## e.g. setting animation.writer to ffmpeg will not work,
                                 ## use ffmpeg_file instead
-savefig.pad_inches  : 0.4      	## Padding to be used when bbox is set to 'tight'
+savefig.pad_inches  : 0.004      	## Padding to be used when bbox is set to 'tight'
 #savefig.jpeg_quality: 95       ## when a jpeg is saved, the default quality parameter.
 #savefig.directory   : plots/   ## default directory in savefig dialog box,
                                 ## leave empty to always use current working directory
