@@ -116,7 +116,7 @@ hatch.linewidth : 0.6
 #### Boxplot
 boxplot.notch       : False
 boxplot.vertical    : True
-boxplot.whiskers    : 0.6
+boxplot.whiskers    : 1.5
 boxplot.bootstrap   : None
 boxplot.patchartist : False
 boxplot.showmeans   : False
