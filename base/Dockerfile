@@ -41,7 +41,7 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
     texlive-fonts-recommended \
     texlive-plain-generic \
     # ----
-    install lsb-core\
+    lsb-core\
     tzdata \
     unzip \
     nano-tiny \
