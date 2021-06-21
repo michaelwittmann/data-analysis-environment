@@ -1,9 +1,12 @@
-name: build and deploy python 3.8
+name: build-and-deploy-docker-python38-image
 on:
   push:
     paths:
-      - 'base/Dockerfile'
       - 'python3.8/Dockerfile'
+  workflow_run:
+    workflows: ["build-and-deploy-docker-base-image"]
+    types:
+      - completed
 
 jobs:
   build-python38:

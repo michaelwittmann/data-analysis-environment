@@ -1,4 +1,4 @@
-name: build and deploy base
+name: build-and-deploy-docker-base-image
 on:
   push:
     paths:
