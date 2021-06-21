@@ -48,14 +48,17 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
     locales \
     fonts-liberation \
     run-one \
+    libssl-dev \
+    build-essential \
+#    libffi-dev \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Create alternative for nano -> nano-tiny
 RUN update-alternatives --install /usr/bin/nano nano /bin/nano-tiny 10
 
 # Install GIS dependencies
-#RUN add-apt-repository ppa:ubuntugis/ubuntugis-stable
-RUN add-apt-repository ppa:ubuntugis/ubuntugis-unstable
+RUN add-apt-repository ppa:ubuntugis/ppa
+#RUN add-apt-repository ppa:ubuntugis/ubuntugis-unstable
 #RUN add-apt-repository ppa:grass/grass-stable
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
