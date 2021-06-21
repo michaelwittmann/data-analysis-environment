@@ -13,6 +13,7 @@ RUN poetry config virtualenvs.create false \
 RUN jupyter contrib nbextension install --user
 RUN jupyter nbextensions_configurator enable --user
 
+# Set working directory
 WORKDIR /home/ubuntu
 
 
