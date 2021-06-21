@@ -1,0 +1,23 @@
+name: build and deploy python 3.8
+on:
+  push:
+    paths:
+      - 'base/Dockerfile'
+      - 'python3.8/Dockerfile'
+
+jobs:
+  build-python38-with-dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v2
+      - name: install buildx
+        id: buildx
+        uses: crazy-max/ghaction-docker-buildx@v1
+        with:
+          version: latest
+      - name: login to docker hub
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+      - name: build the image
+        run: |
+          docker buildx build --push --tag micwittmann/data-analysis-environment:python3.8-with-dependencies --platform linux/amd64,linux/arm64 python3.8-with-dependencies/.
