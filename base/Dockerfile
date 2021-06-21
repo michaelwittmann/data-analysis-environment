@@ -51,7 +51,8 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
     run-one \
     libssl-dev \
     build-essential \
-#    libffi-dev \
+    libffi-dev \
+    llvm \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Create alternative for nano -> nano-tiny
