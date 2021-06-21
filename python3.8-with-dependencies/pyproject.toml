@@ -33,7 +33,7 @@ descartes = "^1.1.0"
 folium = "^0.12.1"
 seaborn = "^0.11.1"
 natsort ="^7.1.1"
-tslearn ="^2.1.0"
+tslearn ="^0.5.1.0"
 
 
 [tool.poetry.dev-dependencies]
