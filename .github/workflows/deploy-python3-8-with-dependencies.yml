@@ -6,6 +6,7 @@ on:
       - 'base/Dockerfile'
       - 'python3.8/Dockerfile'
       - 'python3.8-with-dependencies/Dockerfile'
+      - 'python3.8-with-dependencies/pyproject.toml'
 
 jobs:
   build-python38-with-dependencies:

@@ -2,8 +2,10 @@ name: Build all images
 
 on:
   push:
-    branch:
-     - master
+    paths:
+      - 'base/Dockerfile'
+      - 'python3.8/Dockerfile'
+      - 'python3.8-with-dependencies/Dockerfile'
 
 jobs:
   build-base:
