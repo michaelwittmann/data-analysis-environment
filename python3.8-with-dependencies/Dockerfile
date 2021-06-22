@@ -6,6 +6,7 @@ LABEL maintainer="Michael Wittmann <michael.wittmann@tum.de>"
 WORKDIR /tmp
 
 COPY pyproject.toml ./
+COPY poetry.lock ./
 
 #RUN poetry config virtualenvs.create false \
 #  && poetry install --no-interaction --no-ansi
