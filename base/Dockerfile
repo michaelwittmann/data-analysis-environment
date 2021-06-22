@@ -52,7 +52,13 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
     libssl-dev \
     build-essential \
     libffi-dev \
-    llvm \
+    libllvm-10-ocaml-dev \
+    libllvm10 \
+    llvm-10 \
+    llvm-10-dev \
+    llvm-10-doc \
+    llvm-10-examples \
+    llvm-10-runtime \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Create alternative for nano -> nano-tiny
