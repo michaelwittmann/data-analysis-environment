@@ -1,4 +1,4 @@
-name: build-and-deploy-docker-python38-image
+name: build-and-deploy-docker-python3.8-image
 on:
   push:
     paths:

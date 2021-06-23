@@ -1,14 +1,15 @@
-name: build and deploy python 3.8 with dependencies
+name: build-and-deploy-python3.8-with-dependencies
 
 on:
   workflow_run:
-    workflows: ["build-and-deploy-docker-python38-image"]
+    workflows: ["build-and-deploy-docker-python3.8-image"]
     types:
       - completed
   push:
     paths:
       - 'python3.8-with-dependencies/Dockerfile'
       - 'python3.8-with-dependencies/pyproject.toml'
+      - - 'python3.8-with-dependencies/poetry.lock'
 
 jobs:
   build-python38-with-dependencies:
