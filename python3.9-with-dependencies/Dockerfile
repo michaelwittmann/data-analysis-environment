@@ -5,8 +5,7 @@ LABEL maintainer="Michael Wittmann <michael.wittmann@tum.de>"
 # Install poetry
 WORKDIR /python_env
 
-COPY pyproject.toml ./
-COPY poetry.lock ./
+COPY pyproject.toml poetry.lock ./
 
 ENV POETRY_VIRTUALENVS_IN_PROJECT=true
 RUN poetry install --no-interaction --no-ansi
