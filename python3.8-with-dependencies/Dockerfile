@@ -3,19 +3,12 @@ FROM micwittmann/data-analysis-environment:python3.8
 LABEL maintainer="Michael Wittmann <michael.wittmann@tum.de>"
 
 # Install poetry
-WORKDIR /tmp
+WORKDIR /home/ubuntu
 
-COPY pyproject.toml ./
-COPY poetry.lock ./
+COPY pyproject.toml poetry.lock ./
 
-
-# Install pyyaml manually
-RUN curl https://github.com/yaml/pyyaml/archive/refs/tags/5.4.1.tar.gz\
- && tar -xf pyyaml-5.4.1.tar.gz \
- && python3 pyyaml-5.4.1/setup.py install
-
-RUN poetry config virtualenvs.create false \
-  && poetry install --no-interaction --no-ansi
+ENV POETRY_VIRTUALENVS_IN_PROJECT=true
+RUN poetry install --no-interaction --no-ansi
 
 #RUN poetry config virtualenvs.create false \
 #  && poetry export -f requirements.txt --output requirements.txt --without-hashes \
@@ -27,5 +20,7 @@ RUN jupyter nbextensions_configurator enable --user
 # Set working directory
 WORKDIR /home/ubuntu
 
-
+COPY entrypoint.sh ./
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
 
