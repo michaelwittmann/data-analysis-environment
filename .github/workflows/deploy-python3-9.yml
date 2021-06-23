@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-python38:
+  build-python39:
     runs-on: ubuntu-latest
     steps:
       - name: checkout code
