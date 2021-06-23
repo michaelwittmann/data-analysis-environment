@@ -3,7 +3,7 @@ FROM micwittmann/data-analysis-environment:python3.8
 LABEL maintainer="Michael Wittmann <michael.wittmann@tum.de>"
 
 # Install poetry
-WORKDIR /home/ubuntu
+WORKDIR /python_env
 
 COPY pyproject.toml poetry.lock ./
 
@@ -16,10 +16,12 @@ RUN poetry install --no-interaction --no-ansi
 #  && pip3 install --ignore-installed -r requirements.txt
 
 
-RUN . .venv/bin/activate &&jupyter contrib nbextension install --user
-RUN . .venv/bin/activate &&jupyter contrib nbextension install --user
+RUN . /python_env/.venv/bin/activate &&jupyter contrib nbextension install --user
+RUN . /python_env/.venv/bin/activate &&jupyter contrib nbextension install --user
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
+
+WORKDIR /home/ubuntu
 ENTRYPOINT ["/entrypoint.sh"]
 
