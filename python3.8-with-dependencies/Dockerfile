@@ -12,7 +12,7 @@ COPY poetry.lock ./
 # Install pyyaml manually
 RUN curl https://github.com/yaml/pyyaml/archive/refs/tags/5.4.1.tar.gz\
  && tar -xf pyyaml-5.4.1.tar.gz \
- && python3 pyyaml-5.4.1/setup.py intall
+ && python3 pyyaml-5.4.1/setup.py install
 
 RUN poetry config virtualenvs.create false \
   && poetry install --no-interaction --no-ansi
