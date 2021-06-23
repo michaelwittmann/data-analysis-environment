@@ -1,6 +1,7 @@
 name: build-and-deploy-python3.8-with-dependencies
 
 on:
+  workflow_dispatch:
   workflow_run:
     workflows: ["build-and-deploy-docker-python3.8-image"]
     types:
