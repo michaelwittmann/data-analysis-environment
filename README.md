@@ -27,7 +27,7 @@ Requires=docker.service
 
 
 [Service]
-TimeoutStartSec=0
+TimeoutStartSec=5min
 Restart=always
 ExecStartPre=/usr/bin/docker exec %n stop
 ExecStartPre=/usr/bin/docker rm %n
