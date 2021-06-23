@@ -9,7 +9,7 @@ on:
     paths:
       - 'python3.8-with-dependencies/Dockerfile'
       - 'python3.8-with-dependencies/pyproject.toml'
-      - - 'python3.8-with-dependencies/poetry.lock'
+      - 'python3.8-with-dependencies/poetry.lock'
 
 jobs:
   build-python38-with-dependencies:
