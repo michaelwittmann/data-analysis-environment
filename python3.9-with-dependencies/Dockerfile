@@ -4,7 +4,7 @@ LABEL maintainer="Michael Wittmann <michael.wittmann@tum.de>"
 
 # Install poetry
 ENV VIRTUAL_ENV=/opt/venv
-RUN python3.8 -m venv $VIRTUAL_ENV
+RUN python3.9 -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 WORKDIR /tmp
