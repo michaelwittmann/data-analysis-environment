@@ -1,4 +1,4 @@
-name: build-and-deploy-python3.8-with-dependencies
+name: build-and-deploy-python3.9-with-dependencies
 
 on:
   workflow_dispatch:
