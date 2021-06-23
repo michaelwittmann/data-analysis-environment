@@ -8,12 +8,12 @@ WORKDIR /tmp
 COPY pyproject.toml ./
 COPY poetry.lock ./
 
-#RUN poetry config virtualenvs.create false \
-#  && poetry install --no-interaction --no-ansi
-
 RUN poetry config virtualenvs.create false \
-  && poetry export -f requirements.txt --output requirements.txt --without-hashes \
-  && pip3 install --ignore-installed -r requirements.txt
+  && poetry install --no-interaction --no-ansi
+
+#RUN poetry config virtualenvs.create false \
+#  && poetry export -f requirements.txt --output requirements.txt --without-hashes \
+#  && pip3 install --ignore-installed -r requirements.txt
 
 RUN jupyter contrib nbextension install --user
 RUN jupyter nbextensions_configurator enable --user
