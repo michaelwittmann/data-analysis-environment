@@ -6,7 +6,7 @@ authors = ["Michael Wittmann <michael.wittmann@tum.de>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "~3.8"
+python = "~3.9"
 SQLAlchemy = "^1.3.22"
 loguru = "^0.5.3"
 h3 = "^3.7.1"

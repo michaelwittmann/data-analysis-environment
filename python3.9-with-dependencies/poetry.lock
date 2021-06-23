@@ -530,7 +530,7 @@ optional = false
 python-versions = ">=3.6"
 
 [package.dependencies]
-numpy = {version = ">=1.17.5", markers = "python_version == \"3.8\""}
+numpy = {version = ">=1.19.3", markers = "python_version >= \"3.9\""}
 
 [[package]]
 name = "hijri-converter"
@@ -2110,8 +2110,8 @@ python-versions = "*"
 
 [metadata]
 lock-version = "1.1"
-python-versions = "~3.8"
-content-hash = "918fb2e766a1b9f880775749d1e77c74084286f1457976d39b0817cc932ce08c"
+python-versions = "~3.9"
+content-hash = "7d97702882c62bcefa4280baf7e20eeaa6d553efef77e6a2321e683ec615c261"
 
 [metadata.files]
 absl-py = [
