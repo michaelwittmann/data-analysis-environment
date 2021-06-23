@@ -10,23 +10,16 @@ COPY pyproject.toml poetry.lock ./
 ENV POETRY_VIRTUALENVS_IN_PROJECT=true
 RUN poetry install --no-interaction --no-ansi
 
-ENV VIRTUAL_ENV=.venv
-RUN python3 -m venv $VIRTUAL_ENV
-ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 #RUN poetry config virtualenvs.create false \
 #  && poetry export -f requirements.txt --output requirements.txt --without-hashes \
 #  && pip3 install --ignore-installed -r requirements.txt
 
 
-#RUN . .venv/bin/activate &&jupyter contrib nbextension install --user
-#RUN . .venv/bin/activate &&jupyter contrib nbextension install --user
+RUN . .venv/bin/activate &&jupyter contrib nbextension install --user
+RUN . .venv/bin/activate &&jupyter contrib nbextension install --user
 
-RUN jupyter contrib nbextension install --user
-RUN jupyter contrib nbextension install --user
-
-
-#COPY entrypoint.sh /entrypoint.sh
-#RUN chmod +x /entrypoint.sh
-#ENTRYPOINT ["/entrypoint.sh"]
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
 
