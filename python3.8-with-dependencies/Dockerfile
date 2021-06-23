@@ -14,13 +14,13 @@ RUN poetry install --no-interaction --no-ansi
 #  && poetry export -f requirements.txt --output requirements.txt --without-hashes \
 #  && pip3 install --ignore-installed -r requirements.txt
 
-RUN jupyter contrib nbextension install --user
-RUN jupyter nbextensions_configurator enable --user
 
-# Set working directory
-WORKDIR /home/ubuntu
+RUN . .venv/bin/activate &&jupyter contrib nbextension install --user
+RUN . .venv/bin/activate &&jupyter contrib nbextension install --user
 
-COPY entrypoint.sh ./
+
+
+COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
