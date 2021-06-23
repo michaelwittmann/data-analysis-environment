@@ -8,8 +8,11 @@ WORKDIR /tmp
 COPY pyproject.toml ./
 COPY poetry.lock ./
 
+
 # Install pyyaml manually
-RUN python3 -m pip install https://github.com/yaml/pyyaml/archive/refs/tags/5.4.1.tar.gz
+RUN curl https://github.com/yaml/pyyaml/archive/refs/tags/5.4.1.tar.gz\
+ && tar -xf pyyaml-5.4.1.tar.gz \
+ && python3 pyyaml-5.4.1/setup.py intall
 
 RUN poetry config virtualenvs.create false \
   && poetry install --no-interaction --no-ansi
