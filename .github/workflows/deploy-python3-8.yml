@@ -7,6 +7,7 @@ on:
     workflows: ["build-and-deploy-docker-base-image"]
     types:
       - completed
+  workflow_dispatch:
 
 jobs:
   build-python38:
