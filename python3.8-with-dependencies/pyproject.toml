@@ -36,6 +36,7 @@ natsort ="^7.1.1"
 tslearn ="^0.5.1.0"
 geoplot = "^0.4.1"
 shapely-geojson = "^0.0.1"
+datashader = "^0.13.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
