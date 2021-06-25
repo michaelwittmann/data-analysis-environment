@@ -1841,6 +1841,20 @@ test = ["pytest", "pytest-cov"]
 vectorized = ["numpy"]
 
 [[package]]
+name = "shapely-geojson"
+version = "0.0.1"
+description = "Feature and FeatureCollection for Shapely."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+Shapely = "*"
+
+[package.extras]
+tests = ["pytest", "pytest-cov", "python-coveralls"]
+
+[[package]]
 name = "six"
 version = "1.15.0"
 description = "Python 2 and 3 compatibility utilities"
@@ -2202,7 +2216,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "~3.9"
-content-hash = "68386079ee53100918952fd801b5d81c243442a00fa7378a83e3fe87fa85790f"
+content-hash = "96e86507f69004c13873397f1214f76acda3da60772366ba82eb75f73327c819"
 
 [metadata.files]
 absl-py = [
@@ -3517,6 +3531,10 @@ shapely = [
     {file = "Shapely-1.7.1-cp39-cp39-win32.whl", hash = "sha256:2df5260d0f2983309776cb41bfa85c464ec07018d88c0ecfca23d40bfadae2f1"},
     {file = "Shapely-1.7.1-cp39-cp39-win_amd64.whl", hash = "sha256:a5c3a50d823c192f32615a2a6920e8c046b09e07a58eba220407335a9cd2e8ea"},
     {file = "Shapely-1.7.1.tar.gz", hash = "sha256:1641724c1055459a7e2b8bbe47ba25bdc89554582e62aec23cb3f3ca25f9b129"},
+]
+shapely-geojson = [
+    {file = "shapely-geojson-0.0.1.tar.gz", hash = "sha256:8c26e808bcb84e6c1d728a5666696cc6773c8f87cce94de4eb1722d345f172ac"},
+    {file = "shapely_geojson-0.0.1-py2.py3-none-any.whl", hash = "sha256:d04a7fdee771847fd1ce6c3e0428dcbf0b3367eb84790da610ae818e39fc8ebd"},
 ]
 six = [
     {file = "six-1.15.0-py2.py3-none-any.whl", hash = "sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"},
