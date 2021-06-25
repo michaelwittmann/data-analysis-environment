@@ -34,6 +34,7 @@ folium = "^0.12.1"
 seaborn = "^0.11.1"
 natsort ="^7.1.1"
 tslearn ="^0.5.1.0"
+geoplot = "^0.4.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
